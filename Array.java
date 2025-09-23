@@ -85,15 +85,16 @@ public class Array {
     }
 
     public static void main(String[] args) {
-        Array arr = new Array(10);
+        Array arr = new Array(5);
 
         arr.insert(0,1);
         arr.insert(1,2);
         arr.insert(2,3);
         arr.insert(1,7);
-        arr.insert(1, 9);
+        arr.insert(6,9);
 
         arr.delete(1);
+        arr.delete(-4);
 
         arr.display();
         System.out.println("Capacity of the array: " + arr.getCapacity());
