@@ -30,7 +30,7 @@ public class Array {
             System.out.println("Can't delete: Invalid index");
             return false;
         }
-        for (int i=0; i<size-1; i++) {
+        for (int i=index; i<size-1; i++) {
             arr[i] = arr[i+1];
         }
         size--;
