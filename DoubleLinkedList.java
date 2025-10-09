@@ -141,6 +141,24 @@ public class DoubleLinkedList {
         return false;
     }
 
+    public void reverse() {
+        if (head == null) return;
+
+        Node current = head;
+        Node temp = null;
+
+        while (current != null) {
+            temp = current.prev;
+            current.prev = current.next;
+            current.next = temp;
+
+            current = current.prev;
+        }
+        if (temp != null) {
+            head = temp.prev;
+        }
+    }
+
     public int size() {
         int count = 0;
         Node temp = head;
@@ -180,6 +198,10 @@ public class DoubleLinkedList {
         System.out.println(list.search(8));
 
         System.out.println("Total size od the LinkedList: " + list.size());
+
+        list.display();
+        
+        list.reverse();
 
         list.display();
     }
