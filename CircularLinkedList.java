@@ -48,6 +48,12 @@ public class CircularLinkedList<T> {
             System.out.println("Nothing deleted: Empty List");
             return;
         }
+
+        if (tail.next == tail) {
+            tail = null;
+            System.out.println("Data deleted at the Begining!");
+            return;
+        }
         else {
             tail.next = tail.next.next;
             System.out.println("Data deleted at the Begining!");
@@ -61,7 +67,7 @@ public class CircularLinkedList<T> {
         }
 
         if (tail.next == tail) {
-            tail.next = null;
+            tail = null;
             System.out.println("Data deleted at the End!");
             return;
         }
@@ -81,6 +87,7 @@ public class CircularLinkedList<T> {
             System.out.println("Circular List: Empty");
             return;
         }
+
         Node temp = tail.next;
         System.out.print("Circular List: ");
 
