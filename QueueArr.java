@@ -19,6 +19,7 @@ public class QueueArr {
         }
         arr[++rear] = data;
     }
+    // Time Complexity: O(1)
 
     int dequeue() {
         if (front == -1 ||rear == -1 || front > rear) {
@@ -26,6 +27,7 @@ public class QueueArr {
         }
         return arr[front++];
     }
+    // Time Complexity: O(1)
 
     void display() {
         if (front == -1 || rear == -1 || front > rear) {
@@ -38,6 +40,7 @@ public class QueueArr {
         }
         System.out.println();
     }
+    // Time Complexity: O(n)
 
     public static void main(String[] args) {
         QueueArr queue = new QueueArr();
