@@ -25,6 +25,7 @@ public class QueueLinkedList {
         rear.next = newNode;
         rear = rear.next;
     }
+    // Time Complexity: O(1)
 
     int dequeue() {
         if (front == null) {
@@ -34,6 +35,7 @@ public class QueueLinkedList {
         front = front.next;
         return temp;
     }
+    // Time Complexity: O(1)
 
     void display() {
         if (front == null) {
@@ -48,6 +50,7 @@ public class QueueLinkedList {
         }
         System.out.println();
     }
+    // Time Complexity: O(n)
 
     public static void main(String[] args) {
         QueueLinkedList queue = new QueueLinkedList();
