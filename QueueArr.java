@@ -15,8 +15,9 @@ public class QueueArr {
         if (front == -1 && rear == -1) {
             front++;
             arr[++rear] = data;
+            return;
         }
-        else arr[++rear] = data;
+        arr[++rear] = data;
     }
 
     int dequeue() {
@@ -44,8 +45,8 @@ public class QueueArr {
         queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
-        queue.enqueue(30);
-        queue.enqueue(30);
+        queue.enqueue(40);
+        queue.enqueue(50);
         queue.display();
 
         System.out.println("Dequeued : " + queue.dequeue());
