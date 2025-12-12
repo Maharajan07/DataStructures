@@ -66,9 +66,9 @@ public class CircularQueueArr {
 
         System.out.println("Dequeued : " + queue.dequeue());
         System.out.println("Dequeued : " + queue.dequeue());
-        System.out.println("Dequeued : " + queue.dequeue());
-        System.out.println("Dequeued : " + queue.dequeue());
-        queue.display();
+        // System.out.println("Dequeued : " + queue.dequeue());
+        // System.out.println("Dequeued : " + queue.dequeue());
+        // queue.display();
 
         queue.enqueue(60);
         queue.enqueue(70);
