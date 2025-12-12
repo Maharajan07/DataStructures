@@ -18,6 +18,7 @@ public class CircularQueueArr {
         rear = (rear+1)%size;
         arr[rear] = data;
     }
+    // Time Complexity: O(1)
 
     int dequeue() {
         if (front == -1) {
@@ -33,13 +34,14 @@ public class CircularQueueArr {
         }
         return temp;
     }
+    // Time Complexity: O(1)
 
     void display() {
         if (front == -1) {
             System.out.println("Queue is empty");
             return;
         }
-        System.out.println("Queue elements: ");
+        System.out.print("Queue elements: ");
         int i = front;
         while (true) { 
             System.out.print(arr[i] + " ");
@@ -50,6 +52,7 @@ public class CircularQueueArr {
         }
         System.out.println();
     }
+    // Time Complexity: O(n)
 
     public static void main(String[] args) {
         CircularQueueArr queue = new CircularQueueArr();
@@ -59,7 +62,6 @@ public class CircularQueueArr {
         queue.enqueue(30);
         queue.enqueue(40);
         queue.enqueue(50);
-        queue.enqueue(60);
         queue.display();
 
         System.out.println("Dequeued : " + queue.dequeue());
